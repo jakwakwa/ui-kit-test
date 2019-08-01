@@ -1,18 +1,23 @@
 import React, { Component } from "react";
-import logo from "./logo.svg";
-import "./App.scss";
+import "./styles/styles.scss";
+import SelectBox from "./features/select-box";
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <div className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h2>Welcome to React</h2>
+        <h1>Custom Select Box using ReactJs</h1>
+        <div>
+          <SelectBox
+            width={500}
+            items={[
+              { value: "United States", id: 1 },
+              { value: "Columbia", id: 2 },
+              { value: "China", id: 3 },
+              { value: "Finland", id: 4 }
+            ]}
+          />
         </div>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
       </div>
     );
   }
